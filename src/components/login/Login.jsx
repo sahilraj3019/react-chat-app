@@ -8,17 +8,14 @@ import {
 import { auth, db } from "../../lib/firebase";
 import upload from "../../lib/upload";
 import {
-  arrayUnion,
   collection,
   doc,
-  getDoc,
   getDocs,
   query,
-  serverTimestamp,
   setDoc,
-  updateDoc,
   where,
 } from "firebase/firestore";
+import avatar1 from "../../assets/images/avatar1.png";
 
 const Login = () => {
   const [avatar, setAvatar] = useState({
@@ -107,7 +104,7 @@ const Login = () => {
         <h4>Sign Up</h4>
         <form onSubmit={handleRegister}>
           <label htmlFor="file">
-            <img src={avatar.url || "./avatar1.png"} alt="" />
+            <img src={avatar1} alt="" />
             Upload an image
           </label>
           <input

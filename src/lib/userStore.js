@@ -6,7 +6,10 @@ export const useUserStore = create((set) => ({
   currentUser: null,
   isLoading: true,
   fetchUserInfo: async (uid) => {
-    if (!uid) return set({ currentUser: null, isLoading: false });
+    if (!uid) {
+      const userInfo = set({ currentUser: null, isLoading: false });
+      return userInfo;
+    }
 
     try {
       const docRef = doc(db, "users", uid);
@@ -19,7 +22,8 @@ export const useUserStore = create((set) => ({
       }
     } catch (err) {
       console.log(err);
-      return set({ currentUser: null, isLoading: false });
+      const info = set({ currentUser: null, isLoading: false });
+      return info;
     }
   },
 }));

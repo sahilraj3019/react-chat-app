@@ -1,4 +1,4 @@
-.addUser{
+.addUser {
   width: max-content;
   height: max-content;
   padding: 30px;
@@ -11,18 +11,18 @@
   right: 0;
   margin: auto;
 
-  form{
+  form {
     display: flex;
     gap: 20px;
 
-    input{
+    input {
       padding: 20px;
       border-radius: 10px;
       border: none;
       outline: none;
     }
 
-    button{
+    button {
       padding: 20px;
       border-radius: 10px;
       background-color: #1a73e8;
@@ -32,18 +32,18 @@
     }
   }
 
-  .user{
+  .user {
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .detail{
+    .detail {
       display: flex;
       align-items: center;
       gap: 20px;
 
-      img{
+      img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -51,7 +51,7 @@
       }
     }
 
-    button{
+    button {
       padding: 10px;
       border-radius: 10px;
       background-color: #1a73e8;

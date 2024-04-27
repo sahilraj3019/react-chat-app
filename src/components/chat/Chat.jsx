@@ -13,6 +13,14 @@ import { useChatStore } from "../../lib/chatStore";
 import { useUserStore } from "../../lib/userStore";
 import upload from "../../lib/upload";
 import { format } from "timeago.js";
+import avatar1 from "../../assets/images/avatar1.png";
+import phone from "../../assets/images/phone.png";
+import video from "../../assets/images/video.png";
+import info from "../../assets/images/info.png";
+import imag from "../../assets/images/img.png";
+import camera from "../../assets/images/camera.png";
+import emoji from "../../assets/images/emoji.png";
+import mic from "../../assets/images/mic.png";
 
 const Chat = () => {
   const [chat, setChat] = useState();
@@ -101,13 +109,13 @@ const Chat = () => {
       });
     } catch (err) {
       console.log(err);
-    } finally{
-    setImg({
-      file: null,
-      url: "",
-    });
+    } finally {
+      setImg({
+        file: null,
+        url: "",
+      });
 
-    setText("");
+      setText("");
     }
   };
 
@@ -118,13 +126,13 @@ const Chat = () => {
           <img src={user?.avatar || "./avatar1.png"} alt="" />
           <div className="texts">
             <span>{user?.username}</span>
-            <p>Lorem ipsum dolor, sit amet.</p>
+            <p>About The User.....</p>
           </div>
         </div>
         <div className="icons">
-          <img src="./phone.png" alt="" />
-          <img src="./video.png" alt="" />
-          <img src="./info.png" alt="" />
+          <img src={phone} alt="" />
+          <img src={video} alt="" />
+          <img src={info} alt="" />
         </div>
       </div>
       <div className="center">
@@ -154,7 +162,7 @@ const Chat = () => {
       <div className="bottom">
         <div className="icons">
           <label htmlFor="file">
-            <img src="./img.png" alt="" />
+            <img src={imag} alt="" />
           </label>
           <input
             type="file"
@@ -162,8 +170,8 @@ const Chat = () => {
             style={{ display: "none" }}
             onChange={handleImg}
           />
-          <img src="./camera.png" alt="" />
-          <img src="./mic.png" alt="" />
+          <img src={camera} alt="" />
+          <img src={mic} alt="" />
         </div>
         <input
           type="text"
@@ -178,7 +186,7 @@ const Chat = () => {
         />
         <div className="emoji">
           <img
-            src="./emoji.png"
+            src={emoji}
             alt=""
             onClick={() => setOpen((prev) => !prev)}
           />

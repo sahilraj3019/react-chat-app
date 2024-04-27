@@ -5,6 +5,9 @@ import { useUserStore } from "../../../lib/userStore";
 import { doc, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
 import { db } from "../../../lib/firebase";
 import { useChatStore } from "../../../lib/chatStore";
+import search from "../../../assets/images/search.png";
+import plus from "../../../assets/images/plus.png";
+import minus from "../../../assets/images/minus.png";
 
 const ChatList = () => {
   const [chats, setChats] = useState([]);
@@ -72,7 +75,7 @@ const ChatList = () => {
     <div className="chatList">
       <div className="search">
         <div className="searchBar">
-          <img src="./search.png" alt="" />
+          <img src={search} alt="" />
           <input
             type="text"
             placeholder="Search"
@@ -80,7 +83,7 @@ const ChatList = () => {
           />
         </div>
         <img
-          src={addMode ? "./minus.png" : "./plus.png"}
+          src={addMode ? minus : plus}
           alt=""
           className="add"
           onClick={() => setAddMode((prev) => !prev)}
