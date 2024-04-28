@@ -145,7 +145,7 @@ const Chat = () => {
           >
             <div className="texts">
               {message.img && <img src={message.img} alt="" />}
-              <p>{message.text}</p>
+              <p style={{ backgroundColor: "#5183fe" }}>{message.text}</p>
               <span>{format(message.createdAt.toDate())}</span>
             </div>
           </div>
@@ -185,11 +185,7 @@ const Chat = () => {
           disabled={isCurrentUserBlocked || isReceiverBlocked}
         />
         <div className="emoji">
-          <img
-            src={emoji}
-            alt=""
-            onClick={() => setOpen((prev) => !prev)}
-          />
+          <img src={emoji} alt="" onClick={() => setOpen((prev) => !prev)} />
           <div className="picker">
             <EmojiPicker open={open} onEmojiClick={handleEmoji} />
           </div>

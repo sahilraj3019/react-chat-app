@@ -29,9 +29,9 @@ const App = () => {
     <div className="container">
       {currentUser ? (
         <>
-          <List />
-          {chatId && <Chat />}
           {chatId && <Detail />}
+          {chatId && <Chat />}
+          <List />
         </>
       ) : (
         <Login />

@@ -131,7 +131,7 @@
 
     input {
       flex: 1;
-      background-color: rgba(17, 25, 40, 0.5);
+      background-color: rgba(17, 25, 40, 1);
       border: none;
       outline: none;
       color: white;
